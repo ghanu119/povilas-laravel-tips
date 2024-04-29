@@ -881,6 +881,18 @@ public function getRouteKeyName() {
 }
 ```
 
+### Route Model Binding: From Route
+
+If you want to Route model not use the ID column and you want the another column to match, like, `username`:
+
+```php
+// Default here is ID column
+Route::get('api/users/{user}', function (App\User $user) { … }
+
+// But you can define the column to match
+Route::get('api/users/{user:username}', function (App\User $user) { … }
+```
+
 ### Quickly Navigate from Routes file to Controller
 
 Instead of routing like this:
