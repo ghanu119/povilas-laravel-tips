@@ -179,6 +179,8 @@ In Eloquent Query Builder, you can specify "as" to return any column with a diff
 
 ```php
 $users = \App\Models\User::select('name', 'email as user_email')->get();
+// OR
+$users = \App\Models\User::all(['name', 'email as user_email']);
 ```
 
 ### Map query results
