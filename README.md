@@ -1110,7 +1110,7 @@ You can filter by NULL in Eloquent, but if you're filtering the **collection** f
 
 ```php
 // This works
-$messages = Message::where('read_at is null')->get();
+$messages = Message::whereRaw('read_at is null')->get();
 
 // Won’t work - will return 0 messages
 $messages = Message::all();
