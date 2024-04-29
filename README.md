@@ -173,12 +173,12 @@ In addition to `findOrFail()`, there's also Eloquent method `firstOrFail()` whic
 $user = User::where('email', 'povilas@laraveldaily.com')->firstOrFail();
 ```
 
-### Column name change
+### Column name change / Column Name Alias
 
 In Eloquent Query Builder, you can specify "as" to return any column with a different name, just like in plain SQL query.
 
 ```php
-$users = DB::table('users')->select('name', 'email as user_email')->get();
+$users = \App\Models\User::select('name', 'email as user_email')->get();
 ```
 
 ### Map query results
